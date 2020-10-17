@@ -1,0 +1,108 @@
+.header
+    margin: 9px 91px 10px 89px
+    &__hamburger
+        &:hover
+            background-color: #584f4f
+            transition: 0.8s all
+        max-width: 35px
+        height: 35px
+        background-color: #362f2f
+        display: flex
+        flex-direction: column
+        justify-content: center
+        cursor: pointer
+        margin-left: 12px
+        transition: 0.6s all
+        span
+            display: block
+            height: 2px
+            width: 20px
+            background-color: #ffffff
+            margin-top: 2px
+            margin-bottom: 2px
+            margin-left: 8px
+        &_active
+            background-color: #fff
+            border: 1px solid #b4b1b1
+            transition: 0.6s all
+            &:hover
+                background-color: #ffffff
+                transition: 0.8s all
+            span
+                background-color: #362f2f
+                height: 2px
+                width: 17px
+                &:nth-child(1)
+                    transform: rotate(-45deg)
+                    transition: 0.6s all
+                    margin-bottom: -3px
+                    margin-left: 8px
+                &:nth-child(2)
+                    display: none
+                &:nth-child(3)
+                    transform: rotate(45deg)
+                    transition: 0.6s all
+                    margin-left: 8px
+    &__menu
+        visibility: hidden;
+        opacity: 0;
+        position: absolute
+        width: 410px
+        margin-left: 50px
+        margin-top: -25px
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        transition: all .9s ease;
+        &_active
+            visibility: visible;
+            transform: translateX(0);
+            opacity: 1;
+            position: absolute
+            width: 410px
+            margin-left: 50px
+            margin-top: -25px
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+        &__item
+            color: #362f2f
+            font-family: "Roboto Condensed"
+            font-size: 12px
+            font-weight: 700
+            font-style: normal
+            letter-spacing: normal
+            line-height: normal
+            text-transform: uppercase
+            cursor: pointer
+            text-decoration: none
+            position: relative
+            &:after
+                content: ''
+                display: block
+                position: absolute
+                margin-top: 2px
+                left: -3px
+                width: 0%
+                height: 2px
+                background-color: #f3c90c
+                transition: width 0.3s ease-out
+            &:hover::after
+                width: 120%    
+    &__logo
+        position: absolute
+        z-index: 222
+        display: block
+        top: 0  
+        left: 47% 
+        width: 90px
+        height: 90px                 
+    &__social
+        position: absolute
+        width: 145px
+        top: 32px
+        right: 110px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        cursor: pointer
